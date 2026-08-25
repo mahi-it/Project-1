@@ -153,8 +153,7 @@ while True:
 
             else:
                 for student in students:
-                    print("student_ID",
-                        student["student_tuple"][0],":",",".join(student["subjects"]) )
+                    print("student_ID",student["student_tuple"][0],":",",".join(student["subjects"]))
 
         case 6:
             print()
