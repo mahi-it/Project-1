@@ -159,7 +159,7 @@ while True:
 
         case 6:
             print()
-            print("Thanks for using Student Data Organizer and displaying the exit message!" )
+            print("Thanks for using Student Data Organizer and displaying the exit message " )
             break
 
         case _:
