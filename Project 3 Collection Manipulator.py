@@ -113,7 +113,7 @@ while True:
                         )
 
                     elif update == 6:
-                        student["subjects"] = set( input("Enter new subjects: ").split(",")
+                        student["subjects"]=set( input("Enter new subjects: ").split(",")
                         )
                         print("Subjects updated successfully!")
 
