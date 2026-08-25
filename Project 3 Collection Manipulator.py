@@ -55,7 +55,6 @@ while True:
 
         case 2:
             print()
-
             if len(students) == 0:
                 print("No student record found!")
 
