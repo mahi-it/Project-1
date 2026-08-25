@@ -70,6 +70,9 @@ while True:
                         f"Subjects: {','.join(student['subjects'])}"
                     )
 
+                print()
+                print("Total Students:", len(students))
+
         case 3:
             print()
             print("--- Updating Student Information ---")
