@@ -21,7 +21,6 @@ while True:
 
             s_id = int(input("Student ID: "))
 
-            # Check for duplicate Student ID
             duplicate = False
 
             for student in students:
@@ -38,12 +37,7 @@ while True:
                 grade = input("Grade: ")
                 DOB = input("Date of Birth (YYYY-MM-DD): ")
 
-                subjects = set(
-                    subject.strip()
-                    for subject in input(
-                        "Subjects (comma-separated): "
-                    ).split(",")
-                )
+                subjects = set(input("Subjects (comma-separated): ").split(",") )
 
                 student_tuple = (s_id, DOB)
 
@@ -119,11 +113,7 @@ while True:
                         )
 
                     elif update == 6:
-                        student["subjects"] = set(
-                            subject.strip()
-                            for subject in input(
-                                "Enter new subjects: "
-                            ).split(",")
+                        student["subjects"] = set( input("Enter new subjects: ").split(",")
                         )
                         print("Subjects updated successfully!")
 
@@ -139,20 +129,15 @@ while True:
             print()
             print("--- Delete Student ---")
 
-            var = int(
-                input("Enter Student ID you want to delete: ")
-            )
+            var = int(input("Enter Student ID you want to delete: ") )
 
             for student in students:
 
                 if student["student_tuple"][0] == var:
 
-                    students.remove(student)
+                    del students[students.index(student)]
 
-                    print(
-                        "Student with ID %d deleted successfully!"
-                        % var
-                    )
+                    print("Student with ID %d deleted successfully!" % var)
 
                     break
 
@@ -168,19 +153,12 @@ while True:
 
             else:
                 for student in students:
-                    print(
-                        "student_ID",
-                        student["student_tuple"][0],
-                        ":",
-                        ",".join(student["subjects"])
-                    )
+                    print("student_ID",
+                        student["student_tuple"][0],":",",".join(student["subjects"]) )
 
         case 6:
             print()
-            print(
-                "Thanks for using Student Data Organizer "
-                "and displaying the exit message!"
-            )
+            print("Thanks for using Student Data Organizer and displaying the exit message!" )
             break
 
         case _:
